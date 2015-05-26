@@ -1,0 +1,16 @@
+{
+  "name": "purescript-tropical",
+  "moduleType": [
+    "node"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "output"
+  ],
+  "dependencies": {
+    "purescript-math": "~0.1.1",
+    "purescript-globals": "~0.1.6"
+  }
+}
