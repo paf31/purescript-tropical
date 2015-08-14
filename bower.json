@@ -9,6 +9,10 @@
     "bower_components",
     "output"
   ],
+  "repository": {                                              
+    "type": "git",                                             
+    "url": "git://github.com/paf31/purescript-tropical.git"
+  },                                                          
   "dependencies": {
     "purescript-globals": "~0.2.0",
     "purescript-math": "~0.2.0",
