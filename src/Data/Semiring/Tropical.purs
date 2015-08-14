@@ -2,6 +2,8 @@
 
 module Data.Semiring.Tropical where
 
+import Prelude
+
 import Math (min)
 import Global (infinity)
 
@@ -15,7 +17,7 @@ runTropical (Tropical n) = n
 
 instance semiringTropical :: Semiring Tropical where
   zero = Tropical infinity
-  (+) (Tropical x) (Tropical y) = Tropical (min x y)
+  add (Tropical x) (Tropical y) = Tropical (min x y)
   one = Tropical zero
-  (*) (Tropical x) (Tropical y) = Tropical (x + y)
+  mul (Tropical x) (Tropical y) = Tropical (add x y)
 
