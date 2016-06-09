@@ -14,7 +14,7 @@ an approximation to `R ∪ {∞}`.
 
 ##### Instances
 ``` purescript
-instance semiringTropical :: Semiring Tropical
+Semiring Tropical
 ```
 
 #### `runTropical`

@@ -4,8 +4,8 @@ module Data.Semiring.Tropical where
 
 import Prelude
 
-import Math (min)
-import Global (infinity)
+import Math as Math
+import Global as Global
 
 -- | The tropical semiring is given by `(R ∪ {∞}, min, +)`, but we use `Number` as
 -- | an approximation to `R ∪ {∞}`.
@@ -16,8 +16,7 @@ runTropical :: Tropical -> Number
 runTropical (Tropical n) = n
 
 instance semiringTropical :: Semiring Tropical where
-  zero = Tropical infinity
-  add (Tropical x) (Tropical y) = Tropical (min x y)
+  zero = Tropical Global.infinity
+  add (Tropical x) (Tropical y) = Tropical (Math.min x y)
   one = Tropical zero
   mul (Tropical x) (Tropical y) = Tropical (add x y)
-
