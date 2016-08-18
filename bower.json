@@ -13,6 +13,7 @@
     "type": "git",
     "url": "git://github.com/paf31/purescript-tropical.git"
   },
+  "license": "MIT",
   "dependencies": {
     "purescript-globals": "^1.0.0",
     "purescript-math": "^2.0.0",
