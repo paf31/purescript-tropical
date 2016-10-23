@@ -9,20 +9,15 @@ newtype Tropical
   = Tropical Number
 ```
 
-The tropical semiring is given by `(R ∪ {∞}, min, +)`, but we use `Number` as
-an approximation to `R ∪ {∞}`.
+The tropical semiring is given by `(ℝ ∪ {∞}, min, +)`, but we use `Number` as
+an approximation to `ℝ ∪ {∞}`.
 
 ##### Instances
 ``` purescript
+Newtype Tropical _
+Eq Tropical
+Ord Tropical
 Semiring Tropical
 ```
-
-#### `runTropical`
-
-``` purescript
-runTropical :: Tropical -> Number
-```
-
-Unpack the underlying `Number`.
 
 

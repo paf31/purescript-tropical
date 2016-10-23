@@ -3,20 +3,21 @@
 module Data.Semiring.Tropical where
 
 import Prelude
-
+import Global (infinity)
 import Math as Math
-import Global as Global
+import Data.Newtype (class Newtype)
 
--- | The tropical semiring is given by `(R ∪ {∞}, min, +)`, but we use `Number` as
--- | an approximation to `R ∪ {∞}`.
+-- | The tropical semiring is given by `(ℝ ∪ {∞}, min, +)`, but we use `Number` as
+-- | an approximation to `ℝ ∪ {∞}`.
 newtype Tropical = Tropical Number
 
--- | Unpack the underlying `Number`.
-runTropical :: Tropical -> Number
-runTropical (Tropical n) = n
+derive instance newtypeTropical :: Newtype Tropical _
+
+derive newtype instance eqTropical :: Eq Tropical
+derive newtype instance ordTropical :: Ord Tropical
 
 instance semiringTropical :: Semiring Tropical where
-  zero = Tropical Global.infinity
+  zero = Tropical infinity
   add (Tropical x) (Tropical y) = Tropical (Math.min x y)
   one = Tropical zero
   mul (Tropical x) (Tropical y) = Tropical (add x y)
