@@ -17,6 +17,7 @@ an approximation to `ℝ ∪ {∞}`.
 Newtype Tropical _
 Eq Tropical
 Ord Tropical
+Show Tropical
 Semiring Tropical
 ```
 

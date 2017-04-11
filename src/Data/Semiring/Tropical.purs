@@ -16,6 +16,9 @@ derive instance newtypeTropical :: Newtype Tropical _
 derive newtype instance eqTropical :: Eq Tropical
 derive newtype instance ordTropical :: Ord Tropical
 
+instance showTropical :: Show Tropical where
+  show (Tropical x) = "(Tropical " <> show x <> ")"
+
 instance semiringTropical :: Semiring Tropical where
   zero = Tropical infinity
   add (Tropical x) (Tropical y) = Tropical (Math.min x y)
