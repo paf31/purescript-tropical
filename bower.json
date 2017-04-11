@@ -15,9 +15,9 @@
   },
   "license": "MIT",
   "dependencies": {
-    "purescript-globals": "^2.0.0",
+    "purescript-globals": "^3.0.0",
     "purescript-math": "^2.0.0",
-    "purescript-prelude": "^2.0.0",
-    "purescript-newtype": "^1.0.0"
+    "purescript-prelude": "^3.0.0",
+    "purescript-newtype": "^2.0.0"
   }
 }
